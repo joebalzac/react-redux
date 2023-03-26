@@ -1,25 +1,16 @@
-import logo from "./logo.svg";
-import "./App.css";
+import CreateTweet from "./components/CreateTweet";
+import TweetList from "./components/TweetList";
 
 function App() {
-  const items = [1, 2, 3, 4];
+  const name = "Big Pun";
+  const message = "I am going to be a software engineer";
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Software Engineer</h1>
+      <CreateTweet author="Lloyd Banks" title="The Man and the legend" />
+      <TweetList name={name} message={message} />
+      <h1>{name}</h1>
     </div>
   );
 }
